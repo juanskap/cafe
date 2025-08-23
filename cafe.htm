@@ -221,6 +221,24 @@
         </div>
       </div>
       
+      <!-- Script de validación de Bootstrap -->
+<script>
+  (function () {
+    'use strict'
+    var forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+</script>
+
       <!-- Lista de comentarios -->
       <div class="col-md-6">
         <div class="card shadow-sm mb-3">
@@ -259,6 +277,9 @@
           <p> <b>📞 Teléfono: +593 987 654 321</b></p>
           <p><b>✉️ Email: contacto@dulcearoma.com</b> </p>
         </div>
+
+        
+
          <!-- Footer -->
 <footer class="bg-dark text-white text-center py-4">
   <div class="container">
